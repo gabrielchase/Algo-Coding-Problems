@@ -11,7 +11,8 @@ const twoSum = function(nums, target) {
     let complement = target - nums[i]
     
     if (complement in hashTable) {
-      return [i, hashTable[complement]]
+      let complementIndex = hashTable[complement]
+      return [i, complementIndex]
     }
     
     // Save value and its corresponding index
