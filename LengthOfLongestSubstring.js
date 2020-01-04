@@ -9,15 +9,15 @@ const lengthOfLongestSubstring = function(s) {
   let longestStringLength = 0
   
   for (c of s) {
-      if (currentString.includes(c)) {
-        let repeatedCharIndex = currentString.indexOf(c)
-        currentString = currentString.slice(repeatedCharIndex + 1, currentString.length)
-      } 
-        
-      currentString += c
+    if (currentString.includes(c)) {
+      let repeatedCharIndex = currentString.indexOf(c)
+      currentString = currentString.slice(repeatedCharIndex + 1, currentString.length)
+    } 
       
-      if (currentString.length > longestStringLength)
-        longestStringLength = currentString.length  
+    currentString += c
+    
+    if (currentString.length > longestStringLength)
+      longestStringLength = currentString.length  
   }
   
   return longestStringLength
